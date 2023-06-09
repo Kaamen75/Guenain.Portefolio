@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Zilla+Slab:wght@400;600&display=swap');
+html {
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: slide 12s infinite;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('1.jpg');
+    }
+    33% {
+        background-image: url('2.jpg');
+    }
+    66% {
+        background-image: url('3.jpg');
+    }
+    100% {
+        background-image: url('1.jpg');
+    }
+}
+
+body, html {
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    font-family: 'Zilla Slab', serif;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    line-height: 1.4
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 120px;
+}
+.backdrop-container {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-animation: fadeIn 1.2s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+nav {
+    width: 100%;
+    background-color: #1E1E1E;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.mobile-nav-open-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    color: white;
+    margin-left: 3rem;
+}
+
+.sidenav-container {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #1982C4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.sidenav-container a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 10px 0;
+    opacity: 1;
+}
+
+.sidenav-container a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav-container .closebtn {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #C9002B;
+    padding-right: 1rem;
+}
+
+.sidenav-container .drawer-close-button {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+main {
+
+}
+
+#content section {
+    background-image: linear-gradient(to right top, rgba(255, 105, 180, 0.6), rgba(237, 63, 190, 0.6), rgba(207, 6, 207, 0.6), rgba(156, 0, 229, 0.6), rgba(15, 0, 255, 0.6));
+    display: none;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section * {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+.formation, .competence, .experience, .interet , .presentation {
+    margin-bottom: 10px;
+    padding: 2rem 0;
+    border-radius: 5px;
+    max-width: calc(100% - 3rem);
+}
+
+
+@media (max-width: 800px) {
+    #formations, #competences, #experiences, #interets, #home {
+        width: 100%;
+    }
+    h2, h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 800px) {
+    #formations, #competences, #experiences, #interets, #home {
+        width: 100%;
+    }
+    h2, h1 {
+        font-size: 34px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+}
+
+h2,h1 {
+    color: #ADD8E6;
+    font-family: 'Secular One', sans-serif;
+
+
+}
+p {
+    color: #f4f4f4;
+    font-family: 'Zilla Slab', serif;
+}
